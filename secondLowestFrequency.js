@@ -13,8 +13,8 @@ function secondLowest(numsArray) {
   let secondLowestFreq;
 
   for (let i = 0; i < sortedHash.length; i++) {
-    if (sortedHash[0][1] == sortedHash[sortedHash.length - 1][1]) {
-      return Object.keys(myHash).sort((a, b) => a - b)[1];
+    if (lowestFreq == sortedHash[sortedHash.length - 1][1]) {
+      return Object.keys(myHash)[1];
     }
     if (sortedHash[i][1] > lowestFreq) {
       if (sortedHash[i + 1] && sortedHash[i + 1][1] == sortedHash[i][1]) {
@@ -23,7 +23,6 @@ function secondLowest(numsArray) {
         return (secondLowestFreq = sortedHash[i][0]);
       }
     }
-    continue;
   }
 }
 

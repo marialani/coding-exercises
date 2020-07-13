@@ -14,3 +14,6 @@ function longestSequence(sequence) {
 console.log(longestSequence("dghhhmhmx")); // {h: 3}
 console.log(longestSequence("dhkkhhKKKt")); // {k: 3}
 console.log(longestSequence("aBbBadddadd")); // {b: 3}
+
+// An example output that demonstrates the need to sort the matches array
+console.log("my example output: ", longestSequence("dddbbbrrr")); // {b: 3}

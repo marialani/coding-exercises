@@ -1,16 +1,13 @@
 // 3. Savings Account Balance
 
 function balance(openingSum, interestRate, taxFreeLimit, taxRate, numMonths) {
-  let accountBalance;
+  let accountBalance = openingSum;
   for (let i = 0; i < numMonths; i++) {
-    if (i === 0) {
-      accountBalance = openingSum;
-    }
     let interest = (accountBalance / 100) * interestRate;
     let taxableIncome = accountBalance - taxFreeLimit;
     let monthlyTax = taxableIncome < 0 ? 0 : (taxableIncome / 100) * taxRate;
 
-    accountBalance = accountBalance + interest - monthlyTax;
+    accountBalance += interest - monthlyTax;
   }
   return accountBalance;
 }
